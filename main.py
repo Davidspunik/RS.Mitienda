@@ -9,7 +9,6 @@ from passlib.context import CryptContext
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 import shutil
-
 from typing import Optional
 import uuid
 import os
@@ -112,7 +111,6 @@ def logout(request: Request):
 #@app.get("/", response_class=HTMLResponse)
 #def Carga_temporal(request: Request, current_user: models.User = Depends(get_current_user)):
 #    return templates.TemplateResponse("base.html", {"request": request, "current_user": current_user})
-
 
 # Ruta principal para mostrar productos
 @app.get("/", response_class=HTMLResponse)
@@ -356,4 +354,5 @@ def rate_product(product_id: int, db: Session = Depends(get_db), current_user: m
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)
+    
     

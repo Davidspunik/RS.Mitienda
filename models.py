@@ -49,3 +49,4 @@ class Rating(Base):
     # Restricción: asegura que un usuario no pueda valorar el mismo producto más de una vez
     __table_args__ = (UniqueConstraint('user_id', 'product_id', name='_user_product_uc'),)
     
+    
